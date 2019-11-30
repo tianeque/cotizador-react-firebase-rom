@@ -1,200 +1,221 @@
 import React from "react";
 
-function InformacionTecnica() {
+function InformacionTecnica(props) {
+  console.log(props);
   return (
     <React.Fragment>
-      <div class="container">
+      <div className="container">
         <h3>Informacion Tecnica</h3>
-        <div class="row">
-          <div class="col">
+        <div className="row">
+          <div className="col">
             <div>
-              <label for="nombre-cliente">Nombre Cliente</label>
+              <label htmlFor="nombre-cliente">Nombre Cliente</label>
               <input
-                class="form-control"
+                className="form-control"
                 type="text"
                 id="nombre-cliente"
-                value="Sebastian"
+                name="nombreCliente"
+                defaultValue="Sebastian"
+                onChange={props.onChange}
               />
             </div>
             <div>
-              <label for="tipo-trabajo">Tipo de Trabajo</label>
+              <label htmlFor="tipo-trabajo">Tipo de Trabajo</label>
               <input
-                class="form-control"
+                className="form-control"
                 type="text"
                 id="tipo-trabajo"
-                value="Boletas 1/2 Carta"
+                name="tipoTrabajo"
+                defaultValue="Boletas 1/2 Carta"
               />
             </div>
             <div>
-              <label for="tipo-cliente">Tipo de Cliente</label>
+              <label htmlFor="tipo-cliente">Tipo de Cliente</label>
               <input
-                class="form-control"
+                className="form-control"
                 type="text"
                 id="tipo-cliente"
-                value="Imprenta"
+                name="tipoCliente"
+                defaultValue="Imprenta"
               />
             </div>
             <div>
-              <label for="cantidad">Cantidad</label>
+              <label htmlFor="cantidad">Cantidad</label>
               <input
-                class="form-control"
+                className="form-control"
                 type="number"
-                name=""
                 id="cantidad"
-                value="1000"
+                name="cantidad"
+                defaultValue="1000"
               />
             </div>
             <div>
-              <label for="moldes">Moldes</label>
+              <label htmlFor="moldes">Moldes</label>
               <input
-                class="form-control"
+                className="form-control"
                 type="nPumber"
                 id="moldes"
-                value="2"
+                name="moldes"
+                defaultValue="2"
               />
             </div>
             <div>
-              <label for="multiplicidad">Multiplicidad</label>
+              <label htmlFor="multiplicidad">Multiplicidad</label>
               <input
-                class="form-control"
+                className="form-control"
                 type="number"
                 id="multiplicidad"
-                value="4"
+                name="multiplicidad"
+                defaultValue="4"
               />
             </div>
             <div>
-              <label for="sobrantes">Sobrantes</label>
+              <label htmlFor="sobrantes">Sobrantes</label>
               <input
-                class="form-control"
+                className="form-control"
                 type="number"
                 id="sobrantes"
-                value="10"
+                name="sobrantes"
+                defaultValue="10"
               />
             </div>
             <div>
-              <label for="untal">Unidades/Talonario</label>
-              <input class="form-control" type="number" id="untal" value="50" />
+              <label htmlFor="untal">Unidades/Talonario</label>
+              <input
+                className="form-control"
+                type="number"
+                id="untal"
+                name="untal"
+                defaultValue="50"
+              />
             </div>
             <div>
-              <label for="diseno">Valor diseño</label>
+              <label htmlFor="diseno">Valor diseño</label>
               <input
-                class="form-control"
+                className="form-control"
                 type="number"
                 id="diseno"
-                value="10000"
+                name="diseno"
+                defaultValue="10000"
               />
             </div>
           </div>
-          <div class="col">
+          <div className="col">
             <div>
-              <label for="gastos-generales">Gastos Generales</label>
+              <label htmlFor="gastos-generales">Gastos Generales</label>
               <input
-                class="form-control"
+                className="form-control"
                 type="number"
                 id="gastos-generales"
-                value="80"
+                name="gastosGenerales"
+                defaultValue="80"
               />
             </div>
             <div>
-              <label for="utilidad">Utilidad</label>
+              <label htmlFor="utilidad">Utilidad</label>
               <input
-                class="form-control"
+                className="form-control"
                 type="number"
                 id="utilidad"
-                value="75"
+                name="utilidad"
+                defaultValue="75"
               />
             </div>
             <div>
-              <label for="impuesto">Impuesto</label>
+              <label htmlFor="impuesto">Impuesto</label>
               <input
-                class="form-control"
+                className="form-control"
                 type="number"
                 id="impuesto"
-                value="30"
+                name="impuesto"
+                defaultValue="30"
               />
             </div>
             <div>
-              <label for="hojas-resma">Hojas Resma</label>
+              <label htmlFor="hojas-resma">Hojas Resma</label>
               <input
-                class="form-control"
+                className="form-control"
                 type="number"
                 id="hojas-resma"
-                value="500"
+                name="hojasResma"
+                defaultValue="500"
               />
             </div>
             <div>
-              <label for="costo-resma">Costo Resma</label>
+              <label htmlFor="costo-resma">Costo Resma</label>
               <input
-                class="form-control"
+                className="form-control"
                 type="number"
                 id="costo-resma"
-                value="3500"
+                name="costoResma"
+                defaultValue="3500"
               />
             </div>
             <div>
-              <label for="costo-tinta">Costo Tinta</label>
+              <label htmlFor="costo-tinta">Costo Tinta</label>
               <input
-                class="form-control"
+                className="form-control"
                 type="number"
                 id="costo-tinta"
-                value="1.6"
+                name="costoTinta"
+                defaultValue="1.6"
               />
             </div>
             <div>
-              <label for="alzado">
+              <label htmlFor="alzado">
                 <input
-                  class="form-check-input"
+                  className="form-check-input"
                   type="checkbox"
                   id="alzado"
-                  value="alzado"
+                  defaultValue="alzado"
                   checked
                 />
                 Alzado
               </label>
             </div>
             <div>
-              <label for="separado">
+              <label htmlFor="separado">
                 <input
-                  class="form-check-input"
+                  className="form-check-input"
                   type="checkbox"
                   id="separado"
-                  value="separado"
+                  defaultValue="separado"
                   checked
                 />
                 Separado
               </label>
             </div>
             <div>
-              <label for="corcheteado">
+              <label htmlFor="corcheteado">
                 <input
-                  class="form-check-input"
+                  className="form-check-input"
                   type="checkbox"
                   id="corcheteado"
-                  value="corcheteado"
+                  defaultValue="corcheteado"
                   checked
                 />
                 Corcheteado
               </label>
             </div>
             <div>
-              <label for="corte">
+              <label htmlFor="corte">
                 <input
-                  class="form-check-input"
+                  className="form-check-input"
                   type="checkbox"
                   id="corte"
-                  value="corte"
+                  defaultValue="corte"
                   checked
                 />
                 Corte
               </label>
             </div>
             <div>
-              <label for="perforado">
+              <label htmlFor="perforado">
                 <input
-                  class="form-check-input"
+                  className="form-check-input"
                   type="checkbox"
                   id="perforado"
-                  value="perforado"
+                  defaultValue="perforado"
                   checked
                 />
                 Perforado
@@ -202,22 +223,22 @@ function InformacionTecnica() {
             </div>
           </div>
         </div>
-        <div class="row botones">
-          <button class="btn btn-primary" id="guardar">
+        <div className="row botones">
+          <button className="btn btn-primary" id="guardar">
             guardar
           </button>
           <input
-            class="btn btn-primary"
+            className="btn btn-primary"
             type="button"
-            value="Calcular"
+            defaultValue="Calcular"
             id="btn-calcular-precio"
             data-toggle="modal"
             data-target="#modal-resultados-precio"
           />
           <input
-            class="btn btn-primary"
+            className="btn btn-primary"
             type="button"
-            value="Ver Detalle"
+            defaultValue="Ver Detalle"
             id="btn-calcular-detalle"
             data-toggle="modal"
             data-target="#modal-resultados-detalle"
